@@ -12,6 +12,9 @@
 	img {
 		height: 100%;
 	}
+	img:hover {
+		cursor: pointer;
+	}
 </style>
 
 <html>
@@ -24,6 +27,9 @@
 </html>
 
 <script>
+	var music = new Audio("Assets/Audio/Darude - Chuggstorm (Sandstorm - Snowchugger Remix).mp3");
+	music.volume = 0.1;
+	music.play();
 	var samples = [
 			new Audio("Assets/Audio/My Name is Andrey.mp3"),
 			new Audio("Assets/Audio/Become Legendary.mp3"),
