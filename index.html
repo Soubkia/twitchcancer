@@ -1,0 +1,47 @@
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body {
+		text-align: center;
+	}
+	img {
+		height: 100%;
+	}
+</style>
+
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<img src="Assets/Images/reynad.png">
+	</body>
+</html>
+
+<script>
+	var samples = [
+			new Audio("Assets/Audio/My Name is Andrey.mp3"),
+			new Audio("Assets/Audio/Become Legendary.mp3"),
+			new Audio("Assets/Audio/I have gotten legendary.mp3"),
+			new Audio("Assets/Audio/Havnt been on the front page of reddit.mp3"),
+			new Audio("Assets/Audio/Doing It Live.mp3"),
+			new Audio("Assets/Audio/Losing.mp3"),
+			new Audio("Assets/Audio/Most Popular Decks.mp3"),
+			new Audio("Assets/Audio/Reynad Murloc.mp3"),
+			new Audio("Assets/Audio/Yeah.mp3"),
+			new Audio("Assets/Audio/Team Tempo Storm.mp3")
+		];
+	$('img').click(function() {
+		var r = Math.floor(Math.random()*samples.length);
+		for (i=0; i<samples.length; i++) {
+			if (!samples[i].paused) {
+	        	samples[i].currentTime = 0;
+	        	samples[i].pause();
+		    }
+		}
+		samples[r].play();
+	});
+</script>
